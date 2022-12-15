@@ -37,4 +37,20 @@ function getAllhabitation($habitation,$log1,$log2,$log3){
 
 return $habitation;
 }
+
+function insertToClient($con,$nom,$email,$mdp,$num){
+    $sql = "INSERT INTO Client VALUES(nextVal(clientseq),%s,%s,%s,%S)";
+    $sql = sprintf("$sql,$nom,$email,$mdp,$num");
+
+    $con->exec($sql);
+}
+
+function insertToHabitation($con,$type,$chambre,$loyer,$quartier,$description){
+  $sql = "INSERT INTO Client VALUES(nextVal(clientseq),%s,%g,%g,%s,%s)";
+  $sql = sprintf("$sql,$type,$chambre,$loyer,$quartier,$description");
+
+  $con->exec($sql);
+}
+  
+
 ?>
