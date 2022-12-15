@@ -22,7 +22,7 @@ create table Habitation(
     loyer decimal,
     idQuartier varchar(15),
     descriptionH text, 
-    FOREIGN KEY (idType) references TypeH(idTypeH),
+    FOREIGN KEY (idTypeh) references TypeH(idTypeH),
     FOREIGN KEY (idQuartier) references Quartier(idQuartier)
 );
 create sequence habseq; start with 1

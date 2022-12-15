@@ -1,0 +1,99 @@
+#logo{
+    width: 297px;
+    height: 37vh;
+    position: absolute;
+    bottom: 126px;
+    left: 40%;
+}
+
+.content_index{
+    display: flex;
+    /* display: grid; */
+    grid-gap: 31px;
+    position: relative;
+    top: 441px;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    align-content: center;
+    /* left: -1%; */
+    justify-content: space-evenly;
+}
+
+.content_index> div{
+    background-color: aliceblue;
+    float: left;
+    width: 25%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-decoration: none; */
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 9px;
+}
+
+.content_index> div> a{
+    text-decoration: none;
+}
+
+.content_index> :nth-child(2)> a{
+    color: orangered;
+}
+
+.content_login{
+
+}
+
+.content_login> div{
+    background-color: #ff45000f;
+    border-color: #0000004d;
+    /* border: inset; */
+    /* background-color: antiquewhite; */
+    /* float: left; */
+    position: relative;
+    left: 38%;
+    width: 409px;
+    display: flex;
+    top: 178px;
+    height: 67vh;
+    align-items: center;
+    /* width: 158px; */
+    justify-content: center;
+    border-style: inset;
+
+}
+
+.content_login> div> form >li{
+    display: flex;
+}
+
+.content_login> div> form{
+    display: grid;
+    grid-gap: 25px;
+}
+
+.content_login> div> form>li> input{
+    width: 322px;
+    height: 7vh;
+}
+
+
+#logoLog{
+    left: 46%;
+    width: 158px;
+    height: 21vh;
+    position: absolute;
+    top: 24px;
+}
+
+.content_login> div> form > li> a{
+    font-size: 27px;
+    /* text-decoration: none; */
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 38px;
+    color: #0000007a;
+    left: 96px;
+}
