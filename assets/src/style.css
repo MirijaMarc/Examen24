@@ -97,3 +97,313 @@
     color: #0000007a;
     left: 96px;
 }
+
+.banniere{
+    border-bottom-style: groove;
+    background-color: #000000a1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 41% 46% 7%;
+    position: relative;
+    top: -7px;
+    height: 7vh;
+}
+
+.banniere> span> img{
+    width: 58px;
+    height: 59px;
+    position: relative;
+    left: 29px;
+}
+
+.habitation_img>a> img{
+    width: 267px;
+    height: 255px;
+    border-radius: 11px;
+}
+.banniere> span> a{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: white;
+}
+.content_accueil{
+    left: 8%;
+    grid-gap: 40px;
+    width: 79%;
+    /* background-color: antiquewhite; */
+    display: grid;
+    grid-template-columns: 26% 26% 26% 22%;
+    top: 78px;
+    position: relative;
+}
+
+.habitation_description{
+    left: 26px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.habitation_description> :nth-child(1){
+    font-weight: bold;
+}
+
+.banniere> span> form> :nth-child(1){
+        /* background-color: antiquewhite; */
+        border-color: transparent;
+        border-radius: 15px;
+        position: relative;
+        left: -31px;
+        height: 28px;
+        width: 81px;
+}
+
+.banniere> span> form> :nth-child(2){
+    background-color: white;
+    width: 262px;
+    height: 26px;
+    border-radius: 15px;
+    border-color: #00000075;
+}
+.habitation {
+    display: block;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    transition: 600ms;
+    transform: scale(1);
+}
+
+.habitation_recherche{
+    left: -38%;
+    position: relative;
+    display: block;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    transition: 600ms;
+    transform: scale(1);
+    top: 39px;
+}
+
+.habitation:hover{
+    transition: 600ms;
+    transform: scale(1.1);
+    
+}
+.content_habitation{
+    position: relative;
+    top: 66px;
+}
+.album_cover> img{
+    height: 400px;
+    width: 600px;
+    border-radius: 16px;
+} 
+
+.album4> div> img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+
+}
+
+.album{
+    left: 46px;
+    position: relative;
+    grid-template-columns: 66% 50%;
+    display: grid;
+    /* background-color: aliceblue; */
+    width: 61%;
+}
+
+.album4 {
+    display: grid;
+    grid-template-columns: 44% 52%;
+}
+
+.content_habitation> span{
+    position: relative;
+    left: 65px;;
+    bottom: 27px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+.description{
+    box-shadow: 12px 12px 2px 1px rgba(143, 143, 146, 0.2);
+    /* border-radius: 20px; */
+    /* border-style: solid; */
+    border-color: #00000021;
+    padding: 24px;
+    right: 6%;
+    font-family: monospace;
+    width: 278px;
+    height: 43vh;
+    /* background-color: beige; */
+    float: right;
+    position: relative;
+    bottom: 301px;
+    /* display: flex; */
+    font-size: 16px;
+    line-height: 42px;
+}
+
+.description> :nth-child(1){
+    font-size: 23px;
+    position: absolute;
+    font-weight: bold;
+    top: -53px;
+    font-family: sans-serif;
+    right: 109px;
+}
+
+.prix{
+    position: absolute;
+    bottom: 109px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    left: 71px;
+    color: #00000078;
+}
+
+.prix> span{
+    color: black;
+}
+
+hr{
+    width: 66%;
+    position: relative;
+    top: 149px;
+    left: -30px;
+}
+
+.reservation {
+    height: 22vh;
+    position: relative;
+    bottom: -133px;
+    float: left;
+    left: 76%;
+    /* background-color: aqua; */
+    width: 232px;
+    font-family: sans-serif;
+    padding: 18px;
+    box-shadow: 12px 12px 2px 1px rgb(143 143 146 / 20%);
+}
+
+.reservation> form> :nth-child(1){
+    grid-gap: 4px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.reservation> form> :nth-child(1)> div{
+    border-style: groove;
+    /* background-color: antiquewhite; */
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 118px;
+    align-content: center;
+}
+
+.reservation> form> :nth-child(2){
+    position: relative;
+    height: 5vh;
+    /* background-color: blueviolet; */
+    top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.reservation> form> :nth-child(2)> input{
+    width: 100%;
+}
+
+.content_inscri{
+    grid-template-columns: 69% 31%;
+    width: 74%;
+    background-color: antiquewhite;
+    height: 87vh;
+    position: relative;
+    top: 47px;
+    left: 10%;
+    display: grid;
+}
+.partieGauche{
+    display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+    background-image: url("../img/airbnb.jpg");
+    transition: 600ms;
+    background-repeat: no-repeat;
+    
+}
+.partieGauche:hover{
+    transition: 600ms;
+    transform: scale(1.01);
+}
+
+#noresult{
+    top: 364px;
+    font-size: 33px;
+    font-family: sans-serif;
+    position: absolute;
+    left: 45%;
+}
+
+.partieDroite{
+    /* background-color: hotpink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+i{
+    font-size: 38px;
+    color: white;
+    left: 43px;
+    position: relative;
+}
+
+#error{
+    font-family: sans-serif;
+    width: 121%;
+    top: 406px;
+    position: absolute;
+    color: red;
+    left: 16%;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.partieDroite> form> li{
+    display: grid;
+   
+}
+.partieDroite> form{
+    display: grid;
+    gap: 45px;
+    position: relative;
+    left: -44px;
+}
+
+.partieDroite> form> li> input{
+    width: 146%;
+    height: 5vh;
+}
+
+.partieGauche> span{
+    bottom: 128px;
+    position: relative;
+    left: 24%;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 45px;
+    color: #ffffffcf;
+}
+
+

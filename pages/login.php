@@ -18,14 +18,18 @@ $status = $_GET['status'];
       <div>
          <form action="../inc/traitement.php" method="post">
             <li><input type="text" name="email" placeholder="Email..." required ></li>
-            <li><input type="text" name="mdp" placeholder="Mot de Passe..." required></li>
+            <li><input type="password" name="mdp" placeholder="Mot de Passe..." required></li>
             <li><input type="submit" value="Se connecter"></li>
             <input type="hidden" name= "status"value="<?php echo $status; ?>">
+            <?php if ($status==0){ ?>
             <li><a href="inscription.php">S'inscrire</a></li>
+            <?php } ?>
          </form>
       </div>
 
     </div>
+
+
 
 
 
