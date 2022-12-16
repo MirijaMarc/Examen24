@@ -3,6 +3,13 @@ require_once("connexion.php");
 
 function getAdmin($connexion){
     $admin=array();
+
+    for ($i=0; $i< $admin.length; $i++ ) {
+      $admin[$i]['nom']=$i->nom;
+      $admin[$i]['email']=$i->email;
+      $admin[$i]['numTel']=$i->numTel;
+    }
+
     return $admin;
 }
 
@@ -12,7 +19,7 @@ function getAllClients($connexion){
     for ($i=0; $i < 10 ; $i++) { 
         $clients[$i]['email']=$i->email;
         $clients[$i]['nom']=$i->nom;
-        $clients[$i]['numero']=$i->numero;
+        $clients[$i]['numTel']=$i->numTel;
     
     }
     return $clients;
@@ -20,11 +27,23 @@ function getAllClients($connexion){
 }
 
 function isAdmin($connexion, $email,$mdp){
-    return true;
+    $admin = array();
+    for ($i=0 ; $i<$admin; $i++) {
+        if (strcmp($admin[$i]['email'],$email) && strcmp($admin[$i]['mdp'],$mdp)) {
+          return true;
+        }
+    }
+    return false;
 }
 
-function isMember($connexion,$email, $mdp){
-    return true;
+function isMember($connexion,$email,$mdp){
+    $clients = array();
+    for ($i=0; $i< $clients.length ; $i++) {
+        if(strcmp($client[$i]['email'],$email) && strcmp($client[$i]['mdp'],$mdp)){
+            return true;
+        }
+    }
+    return false;
 }
 
 function chekingpassword($pasword1,$pasword2){
@@ -38,18 +57,18 @@ function getAllhabitation($habitation,$log1,$log2,$log3){
 return $habitation;
 }
 
-function insertToClient($con,$nom,$email,$mdp,$num){
-    $sql = "INSERT INTO Client VALUES(nextVal(clientseq),%s,%s,%s,%S)";
+function insertToClient($connexion,$nom,$email,$mdp,$num){
+    $sql = "INSERT INTO Client VALUES(nextval('clientseq'),%s,%s,%s,%S)";
     $sql = sprintf("$sql,$nom,$email,$mdp,$num");
 
-    $con->exec($sql);
+    $connexion->exec($sql);
 }
 
-function insertToHabitation($con,$type,$chambre,$loyer,$quartier,$description){
-  $sql = "INSERT INTO Client VALUES(nextVal(clientseq),%s,%g,%g,%s,%s)";
+function insertToHabitation($connexion,$type,$chambre,$loyer,$quartier,$description){
+  $sql = "INSERT INTO Habitation VALUES(nextval('habitationseq'),%s,%g,%g,%s,%s)";
   $sql = sprintf("$sql,$type,$chambre,$loyer,$quartier,$description");
 
-  $con->exec($sql);
+  $connexion->exec($sql);
 }
   
 
