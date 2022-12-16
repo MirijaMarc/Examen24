@@ -65,12 +65,13 @@ $allpics= getAllPicsOfOneHabitation(getConnection(), $_GET['idhabitation']);
             <div>
                 <div>
                     <span>Arrivee</span>
-                    <span><input type="date" value="arrivee"></span>
+                    <span><input type="date" name="arrivee"></span>
+                    <span><input type="hidden" name ="idhabitation" value=<?php echo $_GET['idhabitation']; ?>></span>
                 </div>
 
                 <div>
                     <span>Depart</span>
-                    <span><input type="date" value="depart"></span>
+                    <span><input type="date" name="depart"></span>
                 </div>
             </div>
             <div>
@@ -79,6 +80,14 @@ $allpics= getAllPicsOfOneHabitation(getConnection(), $_GET['idhabitation']);
         </form>
         
     </div>
+
+    <div class="occupation">
+        <a href="calendrier.php?idhabitation=<?php echo $_GET['idhabitation'];?>">Occupation de l' habitat</a>
+    </div>
+    <?php
+        if(isset($_GET['erreurRes'])){ ?>
+            <span id="errorRes">Reservation Impossible</span>
+    <?php }?>
 
     
 </body>

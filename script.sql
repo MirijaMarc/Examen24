@@ -23,6 +23,7 @@ create sequence Habitationseq start with 1;
 create sequence picsseq start with 1;
 create sequence clientseq start with 1;
 create sequence adminseq start with 1;
+create sequence reservationseq start with 1;
 
 
 create table TypeH(
@@ -82,6 +83,14 @@ create table Pics_Habitation(
     FOREIGN key (idHabitation) references Habitation(idHabitation),
     FOREIGN key (idPics) references Pics(idPics)
 ); 
+
+create table Reservation(
+    idReservation varchar(15) primary key,
+    idHabitation varchar(15),
+    arrive date,
+    depart date,
+    FOREIGN KEY (idHabitation) references Habitation(idHabitation)
+);
 
 
 insert into Client values (nextval('clientseq'),'Wijjy','wijjy@gmail.com','wijjy','0348675901');
@@ -252,6 +261,12 @@ insert into Pics_Habitation values('10','48');
 insert into Pics_Habitation values('10','49');
 insert into Pics_Habitation values('10','50');
 
+
+insert into Reservation values(nextval('reservationseq'),'2','2022-12-22','2022-12-27');
+insert into Reservation values(nextval('reservationseq'),'4','2022-12-24','2023-01-03');
+insert into Reservation values(nextval('reservationseq'),'3','2022-12-18','2022-12-29');
+insert into Reservation values(nextval('reservationseq'),'8','2022-12-15','2022-12-26');
+insert into Reservation values(nextval('reservationseq'),'10','2022-12-18','2023-01-10');
 
 -- select p.nom from pics as p
 --     JOIN Pics_Habitation as ph ON p.idPics= ph.idPics

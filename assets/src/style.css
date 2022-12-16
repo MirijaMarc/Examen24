@@ -126,6 +126,21 @@
     font-size: 15px;
     color: white;
 }
+
+.occupation {
+    position: absolute;
+    bottom: 2px;
+    left: 5%;
+}
+
+#errorRes{
+    font-weight: bold;
+    bottom: 101px;
+    left: 79%;
+    position: absolute;
+    color: red;
+    font-family: sans-serif;
+}
 .content_accueil{
     left: 8%;
     grid-gap: 40px;
